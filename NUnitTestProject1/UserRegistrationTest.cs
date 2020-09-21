@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using UserRegistrationProj;
 
 namespace NUnitTestProject1
 {
@@ -10,9 +11,11 @@ namespace NUnitTestProject1
         }
 
         [Test]
-        public void Test1()
+        public void ValidateFirstName()
         {
-            
+            UserRegistrstionMain userregistration = new UserRegistrstionMain();
+            bool result = userregistration.ValidateFirstName("Soumen");
+            Assert.IsTrue(result);
         }
     }
 }
