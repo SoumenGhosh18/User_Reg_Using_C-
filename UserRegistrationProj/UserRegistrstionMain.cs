@@ -14,6 +14,7 @@ namespace UserRegistrationProj
         string passwordRule1 = "([a-z]{8,14}$)";
         string passwordRule2 = "^(?=.*[A-Z])(?=.*[a-z])(.{8,15})$";
         string passwordRule3 = "^(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z])(.{8,15})$";
+        string passwordRule4 = "(?=.*[0-9])(?=.*[@]{1})(?=.*[A-Z])(?=.*[a-z])(.{8,15})$";
 
         public bool ValidateFirstName(String firstName)
         {
@@ -51,6 +52,12 @@ namespace UserRegistrationProj
         {
 
             return Regex.IsMatch(password3, passwordRule3);
+        }
+
+        public bool ValidatePasswordRule4(string password4)
+        {
+
+            return Regex.IsMatch(password4, passwordRule4);
         }
     }
 }
