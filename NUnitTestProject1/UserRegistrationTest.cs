@@ -92,6 +92,7 @@ namespace NUnitTestProject1
             Assert.IsTrue(result6);
             bool result7 = userregistration.ValidateEmailAddress("soumenghosh@gmail.in");
             Assert.IsTrue(result7);
+
         }
     }
 }
