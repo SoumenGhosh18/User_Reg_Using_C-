@@ -17,11 +17,20 @@ namespace NUnitTestProject1
             bool result = userregistration.ValidateFirstName("Soumen");
             Assert.IsTrue(result);
         }
+
         [Test]
         public void ValidateLastName()
         {
             UserRegistrstionMain userregistration = new UserRegistrstionMain();
-            bool result = userregistration.ValidateFirstName("Ghosh");
+            bool result = userregistration.ValidateLastName("Ghosh");
+            Assert.IsTrue(result);
+        }
+
+        [Test]
+        public void ValidateEmailAddress()
+        {
+            UserRegistrstionMain userregistration = new UserRegistrstionMain();
+            bool result = userregistration.ValidateEmailAddress("soumentaki1996@gmail.com");
             Assert.IsTrue(result);
         }
     }
