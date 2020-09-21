@@ -6,5 +6,6 @@ namespace UserRegistrationProj
 {
     class UserRegistrstionMain
     {
+
     }
 }
