@@ -41,5 +41,13 @@ namespace NUnitTestProject1
             bool result = userregistration.ValidateMobileNumber("+919932619681");
             Assert.IsTrue(result);
         }
+
+        [Test]
+        public void When_Follow_Correct_PatternOf_Password_Rule1_Should_Pass()
+        {
+            UserRegistrstionMain userregistration = new UserRegistrstionMain();
+            bool result = userregistration.ValidatePasswordRule1("soumengh");
+            Assert.IsTrue(result);
+        }
     }
 }

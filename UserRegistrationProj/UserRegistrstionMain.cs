@@ -30,5 +30,11 @@ namespace UserRegistrationProj
         {
             return Regex.IsMatch(phnNo, Phone_No);
         }
+
+        public bool ValidatePasswordRule1(string password1)
+        {
+            string passwordRule1 = "([a-z]{8,14}$)";
+            return Regex.IsMatch(password1, passwordRule1);
+        }
     }
 }
