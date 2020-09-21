@@ -9,7 +9,7 @@ namespace UserRegistrationProj
     {
         String FIRST_NAME_PATTERN = "^[A-Z]{1}[a-z]{2,}$";
         String Last_NAME_PATTERN = "^[A-Z]{1}[a-z]{2,}$";
-        String EmailAddress = "^[a-z0-9.+_-]+[@][a-zA-Z0-9]+[.]co(m|.in)$";
+        String EmailAddress = "^[a-z0-9.+_-]+[@][a-zA-Z0-9]+[.](com|in)$";
         String Phone_No = "^([0]|\\+91)?[6789]\\d{9}$";
         string passwordRule1 = "([a-z]{8,14}$)";
         string passwordRule2 = "^(?=.*[A-Z])(?=.*[a-z])(.{8,15})$";

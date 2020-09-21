@@ -73,5 +73,25 @@ namespace NUnitTestProject1
             bool result = userregistration.ValidatePasswordRule4("Soumengh18@");
             Assert.IsTrue(result);
         }
+
+        [Test]
+        public void When_Follow_Every_Correct_PatternOf_Email_Address_Should_Pass()
+        {
+            UserRegistrstionMain userregistration = new UserRegistrstionMain();
+            bool result = userregistration.ValidateEmailAddress("soumentaki1996@gmail.com");
+            Assert.IsTrue(result);
+            bool result1 = userregistration.ValidateEmailAddress("soumen.taki1996@gmail.com");
+            Assert.IsTrue(result1);
+            bool result3 = userregistration.ValidateEmailAddress("soumen@gmail.com");
+            Assert.IsTrue(result3);
+            bool result4 = userregistration.ValidateEmailAddress("soumen1996@gmail.com");
+            Assert.IsTrue(result4);
+            bool result5 = userregistration.ValidateEmailAddress("soumen-taki1996@gmail.com");
+            Assert.IsTrue(result5);
+            bool result6 = userregistration.ValidateEmailAddress("soumen1996taki@gmail.com");
+            Assert.IsTrue(result6);
+            bool result7 = userregistration.ValidateEmailAddress("soumenghosh@gmail.in");
+            Assert.IsTrue(result7);
+        }
     }
 }
