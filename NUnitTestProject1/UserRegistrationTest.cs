@@ -17,5 +17,12 @@ namespace NUnitTestProject1
             bool result = userregistration.ValidateFirstName("Soumen");
             Assert.IsTrue(result);
         }
+        [Test]
+        public void ValidateLastName()
+        {
+            UserRegistrstionMain userregistration = new UserRegistrstionMain();
+            bool result = userregistration.ValidateFirstName("Ghosh");
+            Assert.IsTrue(result);
+        }
     }
 }
