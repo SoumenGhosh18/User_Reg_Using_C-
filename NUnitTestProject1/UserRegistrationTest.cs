@@ -57,5 +57,13 @@ namespace NUnitTestProject1
             bool result = userregistration.ValidatePasswordRule2("Soumengh");
             Assert.IsTrue(result);
         }
+
+        [Test]
+        public void When_Follow_Correct_PatternOf_Password_Rule3_Should_Pass()
+        {
+            UserRegistrstionMain userregistration = new UserRegistrstionMain();
+            bool result = userregistration.ValidatePasswordRule3("Soumengh18");
+            Assert.IsTrue(result);
+        }
     }
 }

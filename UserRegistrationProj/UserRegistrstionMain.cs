@@ -13,6 +13,7 @@ namespace UserRegistrationProj
         String Phone_No = "^([0]|\\+91)?[6789]\\d{9}$";
         string passwordRule1 = "([a-z]{8,14}$)";
         string passwordRule2 = "^(?=.*[A-Z])(?=.*[a-z])(.{8,15})$";
+        string passwordRule3 = "^(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z])(.{8,15})$";
 
         public bool ValidateFirstName(String firstName)
         {
@@ -44,6 +45,12 @@ namespace UserRegistrationProj
         {
 
             return Regex.IsMatch(password2, passwordRule2);
+        }
+
+        public bool ValidatePasswordRule3(string password3)
+        {
+
+            return Regex.IsMatch(password3, passwordRule3);
         }
     }
 }
