@@ -19,11 +19,26 @@ namespace NUnitTestProject1
         }
 
         [Test]
+        public void When_Follow_InCorrect_PatternOf_FirstName_Should_Pass()
+        {
+            UserRegistrstionMain userregistration = new UserRegistrstionMain();
+            bool result = userregistration.ValidateFirstName("So");
+            Assert.IsFalse(result);
+        }
+
+        [Test]
         public void When_Follow_Correct_PatternOf_LastName_Should_Pass()
         {
             UserRegistrstionMain userregistration = new UserRegistrstionMain();
             bool result = userregistration.ValidateLastName("Ghosh");
             Assert.IsTrue(result);
+        }
+        [Test]
+        public void When_Follow_InCorrect_PatternOf_LastName_Should_Pass()
+        {
+            UserRegistrstionMain userregistration = new UserRegistrstionMain();
+            bool result = userregistration.ValidateLastName("Gh");
+            Assert.IsFalse(result);
         }
 
         [Test]
@@ -33,6 +48,13 @@ namespace NUnitTestProject1
             bool result = userregistration.ValidateEmailAddress("soumentaki1996@gmail.com");
             Assert.IsTrue(result);
         }
+        [Test]
+        public void When_Follow_InCorrect_PatternOf_Email_Address_Should_Pass()
+        {
+            UserRegistrstionMain userregistration = new UserRegistrstionMain();
+            bool result = userregistration.ValidateEmailAddress("soumen.,taki1996@gmail.com");
+            Assert.IsFalse(result);
+        }
 
         [Test]
         public void When_Follow_Correct_PatternOf_Mobile_No_Should_Pass()
@@ -40,6 +62,13 @@ namespace NUnitTestProject1
             UserRegistrstionMain userregistration = new UserRegistrstionMain();
             bool result = userregistration.ValidateMobileNumber("+919932619681");
             Assert.IsTrue(result);
+        }
+        [Test]
+        public void When_Follow_InCorrect_PatternOf_Mobile_No_Should_Pass()
+        {
+            UserRegistrstionMain userregistration = new UserRegistrstionMain();
+            bool result = userregistration.ValidateMobileNumber("+009932619681");
+            Assert.IsFalse(result);
         }
 
         [Test]
@@ -49,6 +78,13 @@ namespace NUnitTestProject1
             bool result = userregistration.ValidatePasswordRule1("soumengh");
             Assert.IsTrue(result);
         }
+        [Test]
+        public void When_Follow_InCorrect_PatternOf_Password_Rule1_Should_Pass()
+        {
+            UserRegistrstionMain userregistration = new UserRegistrstionMain();
+            bool result = userregistration.ValidatePasswordRule1("soumengh&&");
+            Assert.IsFalse(result);
+        }
 
         [Test]
         public void When_Follow_Correct_PatternOf_Password_Rule2_Should_Pass()
@@ -56,6 +92,13 @@ namespace NUnitTestProject1
             UserRegistrstionMain userregistration = new UserRegistrstionMain();
             bool result = userregistration.ValidatePasswordRule2("Soumengh");
             Assert.IsTrue(result);
+        }
+        [Test]
+        public void When_Follow_InCorrect_PatternOf_Password_Rule2_Should_Pass()
+        {
+            UserRegistrstionMain userregistration = new UserRegistrstionMain();
+            bool result = userregistration.ValidatePasswordRule2("soumengh##");
+            Assert.IsFalse(result);
         }
 
         [Test]
@@ -65,6 +108,13 @@ namespace NUnitTestProject1
             bool result = userregistration.ValidatePasswordRule3("Soumengh18");
             Assert.IsTrue(result);
         }
+        [Test]
+        public void When_Follow_InCorrect_PatternOf_Password_Rule3_Should_Pass()
+        {
+            UserRegistrstionMain userregistration = new UserRegistrstionMain();
+            bool result = userregistration.ValidatePasswordRule3("soumeng&#h18");
+            Assert.IsFalse(result);
+        }
 
         [Test]
         public void When_Follow_Correct_PatternOf_Password_Rule4_Should_Pass()
@@ -72,6 +122,13 @@ namespace NUnitTestProject1
             UserRegistrstionMain userregistration = new UserRegistrstionMain();
             bool result = userregistration.ValidatePasswordRule4("Soumengh18@");
             Assert.IsTrue(result);
+        }
+        [Test]
+        public void When_Follow_InCorrect_PatternOf_Password_Rule4_Should_Pass()
+        {
+            UserRegistrstionMain userregistration = new UserRegistrstionMain();
+            bool result = userregistration.ValidatePasswordRule4("soumengh18@");
+            Assert.IsFalse(result);
         }
 
         [Test]

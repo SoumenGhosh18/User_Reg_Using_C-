@@ -23,7 +23,7 @@ namespace UserRegistrationProj
 
         public bool ValidateLastName(String lastName)
         {
-            return Regex.IsMatch(lastName, FIRST_NAME_PATTERN);
+            return Regex.IsMatch(lastName, Last_NAME_PATTERN);
         }
 
         public bool ValidateEmailAddress(String email)
