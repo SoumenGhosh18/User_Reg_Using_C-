@@ -1,15 +1,24 @@
-using NUnit.Framework;
-using UserRegistrationProj;
-
 namespace NUnitTestProject1
 {
+    using NUnit.Framework;
+    using UserRegistrationProj;
+
+    /// <summary>
+    /// Test Class
+    /// </summary>
     public class UserRegistrationTest
     {
+        /// <summary>
+        ///  Method SetUp
+        /// </summary>
         [SetUp]
         public void Setup()
         {
         }
 
+        /// <summary>
+        /// Test Method to validate first name
+        /// </summary>
         [Test]
         public void When_Follow_Correct_PatternOf_FirstName_Should_Pass()
         {
@@ -18,6 +27,9 @@ namespace NUnitTestProject1
             Assert.IsTrue(result);
         }
 
+        /// <summary>
+        /// Test Method to validate first name
+        /// </summary>
         [Test]
         public void When_Follow_InCorrect_PatternOf_FirstName_Should_Pass()
         {
@@ -26,6 +38,9 @@ namespace NUnitTestProject1
             Assert.IsFalse(result);
         }
 
+        /// <summary>
+        /// Test Method to validate last name
+        /// </summary>
         [Test]
         public void When_Follow_Correct_PatternOf_LastName_Should_Pass()
         {
@@ -33,6 +48,10 @@ namespace NUnitTestProject1
             bool result = userregistration.ValidateLastName("Ghosh");
             Assert.IsTrue(result);
         }
+
+        /// <summary>
+        /// Test Method to validate last name
+        /// </summary>
         [Test]
         public void When_Follow_InCorrect_PatternOf_LastName_Should_Pass()
         {
@@ -41,6 +60,9 @@ namespace NUnitTestProject1
             Assert.IsFalse(result);
         }
 
+        /// <summary>
+        /// Test Method to validate Email
+        /// </summary>
         [Test]
         public void When_Follow_Correct_PatternOf_Email_Address_Should_Pass()
         {
@@ -48,6 +70,10 @@ namespace NUnitTestProject1
             bool result = userregistration.ValidateEmailAddress("soumentaki1996@gmail.com");
             Assert.IsTrue(result);
         }
+
+        /// <summary>
+        /// Test Method to validate last name
+        /// </summary>
         [Test]
         public void When_Follow_InCorrect_PatternOf_Email_Address_Should_Pass()
         {
@@ -56,6 +82,9 @@ namespace NUnitTestProject1
             Assert.IsFalse(result);
         }
 
+        /// <summary>
+        /// Test Method to validate phone number
+        /// </summary>
         [Test]
         public void When_Follow_Correct_PatternOf_Mobile_No_Should_Pass()
         {
@@ -63,6 +92,10 @@ namespace NUnitTestProject1
             bool result = userregistration.ValidateMobileNumber("+919932619681");
             Assert.IsTrue(result);
         }
+
+        /// <summary>
+        /// Test Method to validate last name
+        /// </summary>
         [Test]
         public void When_Follow_InCorrect_PatternOf_Mobile_No_Should_Pass()
         {
@@ -71,6 +104,9 @@ namespace NUnitTestProject1
             Assert.IsFalse(result);
         }
 
+        /// <summary>
+        /// Test Method to validate password
+        /// </summary>
         [Test]
         public void When_Follow_Correct_PatternOf_Password_Rule1_Should_Pass()
         {
@@ -78,6 +114,10 @@ namespace NUnitTestProject1
             bool result = userregistration.ValidatePasswordRule1("soumengh");
             Assert.IsTrue(result);
         }
+
+        /// <summary>
+        /// Test Method to validate password
+        /// </summary>
         [Test]
         public void When_Follow_InCorrect_PatternOf_Password_Rule1_Should_Pass()
         {
@@ -86,6 +126,9 @@ namespace NUnitTestProject1
             Assert.IsFalse(result);
         }
 
+        /// <summary>
+        /// Test Method to validate password
+        /// </summary>
         [Test]
         public void When_Follow_Correct_PatternOf_Password_Rule2_Should_Pass()
         {
@@ -93,6 +136,10 @@ namespace NUnitTestProject1
             bool result = userregistration.ValidatePasswordRule2("Soumengh");
             Assert.IsTrue(result);
         }
+
+        /// <summary>
+        /// Test Method to validate password
+        /// </summary>
         [Test]
         public void When_Follow_InCorrect_PatternOf_Password_Rule2_Should_Pass()
         {
@@ -101,6 +148,9 @@ namespace NUnitTestProject1
             Assert.IsFalse(result);
         }
 
+        /// <summary>
+        /// Test Method to validate password
+        /// </summary>
         [Test]
         public void When_Follow_Correct_PatternOf_Password_Rule3_Should_Pass()
         {
@@ -108,6 +158,10 @@ namespace NUnitTestProject1
             bool result = userregistration.ValidatePasswordRule3("Soumengh18");
             Assert.IsTrue(result);
         }
+
+        /// <summary>
+        /// Test Method to validate password
+        /// </summary>
         [Test]
         public void When_Follow_InCorrect_PatternOf_Password_Rule3_Should_Pass()
         {
@@ -116,6 +170,9 @@ namespace NUnitTestProject1
             Assert.IsFalse(result);
         }
 
+        /// <summary>
+        /// Test Method to validate password
+        /// </summary>
         [Test]
         public void When_Follow_Correct_PatternOf_Password_Rule4_Should_Pass()
         {
@@ -123,6 +180,10 @@ namespace NUnitTestProject1
             bool result = userregistration.ValidatePasswordRule4("Soumengh18@");
             Assert.IsTrue(result);
         }
+
+        /// <summary>
+        /// Test Method to validate password
+        /// </summary>
         [Test]
         public void When_Follow_InCorrect_PatternOf_Password_Rule4_Should_Pass()
         {
@@ -131,6 +192,9 @@ namespace NUnitTestProject1
             Assert.IsFalse(result);
         }
 
+        /// <summary>
+        /// Test Method to validate Email
+        /// </summary>
         [Test]
         public void When_Follow_Every_Correct_PatternOf_Email_Address_Should_Pass()
         {
@@ -151,7 +215,6 @@ namespace NUnitTestProject1
             Assert.IsTrue(result7);
             bool result8 = userregistration.ValidateEmailAddress("soumenghosh111@gmail.in");
             Assert.IsTrue(result8);
-
         }
     }
 }
